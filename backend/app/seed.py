@@ -545,3 +545,9 @@ SEED_ROWS: dict[str, list[dict[str, Any]]] = {
   '下游消费标识': '采集血缘样例3',
   '记录时间': '2026-09-03'}]
 }
+
+# 缺值分布 / 补采场景的示例数据：新旧格式混用的批次、格式不明的历史行，
+# 以及历史巡检已确认缺值的等待补采任务。
+from app.seed_quality import extend_seed as _extend_quality_seed  # noqa: E402
+
+_extend_quality_seed(SEED_ROWS)
